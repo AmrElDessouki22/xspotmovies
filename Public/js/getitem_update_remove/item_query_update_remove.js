@@ -1,5 +1,6 @@
 const countiner = document.getElementById('countiner')
 var films_=[]
+const urll = 'https://xspot.herokuapp.com'
 const update_endpoint = document.getElementById('helper').getAttribute('update-endpoint')
 const get_endpoint = document.getElementById('helper').getAttribute('end-point')
 const finsh_endpoint = document.getElementById('helper').getAttribute('finsh-endpoint')
@@ -15,7 +16,7 @@ function additem_(){
 getitems()
 async function getitems(){
     
-   const response = await fetch(url+get_endpoint,{
+   const response = await fetch(urll+get_endpoint,{
        method:"GET",
        headers:{'Content-Type':'application/json'}
        })  
@@ -52,13 +53,13 @@ async function update(index)
 }
 async function remove(index)
 {
-    const response =await fetch(url+reomve_endpoint+films_[index]._id,{
+    const response =await fetch(urll+reomve_endpoint+films_[index]._id,{
         method:"Post",
         headers:{'Content-Type':'application/json','Authorization':'Bearer '+document.cookie.split('=')[1]},
     })
     if(response.status == 200)
     {
-        location.href = url+'/dashboard'+finsh_endpoint
+        location.href = urll+'/dashboard'+finsh_endpoint
     }
 
     
@@ -74,23 +75,23 @@ async function remove(index)
 const films = document.getElementById('films')
 films.addEventListener('click',films__)
 function films__(){
-    location.href=url+'/dashboard/films'
+    location.href=urll+'/dashboard/films'
 }
 const series = document.getElementById('series')
 series.addEventListener('click',series__)
 function series__(){
-    location.href=url+'/dashboard/series'
+    location.href=urll+'/dashboard/series'
 }
 const football = document.getElementById('football')
 football.addEventListener('click',football__)
 function football__(){
-    location.href=url+'/dashboard/football'
+    location.href=urll+'/dashboard/football'
 }
 const logout = document.getElementById('logout')
 logout.addEventListener('click',logout_)
 async function logout_(){
     
-   const response = await fetch(url+'/logoutadmin',{
+   const response = await fetch(urll+'/logoutadmin',{
        method:"POST",
        headers:{'Content-Type':'application/json','Authorization':'Bearer '+document.cookie.split('=')[1]},
    })  
