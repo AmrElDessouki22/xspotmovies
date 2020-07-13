@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
       res.render('catigory.hbs')
     })
   app.get('/dashboard/films', function (req, res) {
-      res.render('films.hbs')
+      res.render('Films.hbs')
     })
   app.get('/dashboard/series', function (req, res) {
       res.render('series.hbs')
