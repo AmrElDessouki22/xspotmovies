@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/films.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav style="margin-bottom: 50px;">
+        <img src="../img/logo.png" alt="">
+        <input id="films" type="button" value="Films">
+        <input id="series" type="button" value="Series">
+        <input id="football" type="button" value="Football">
+        <input id="logout" type="button" value="Logout">
+    </nav>
+    <div class="additem">
+        <input id="additem" type="button" value="Add new Series">
+        <h4>Series</h4>
+        <div>
+            <input type="text" placeholder="search">
+            <img src="../img/search.png" alt="">
+        </div>
+    </div>
+    <div id="countiner" class="countiner">
+      
+    </div>
+    <script>
+        const url='http://localhost:3000'
+    </script>
+        <script id="helper" add-item="../dashboard/addseries" reomve-endpoint="/removeseries/" finsh-endpoint='/series' end-point="/getseries" update-endpoint="../dashboard/updateseries/" src="../js/getitem_update_remove/item_query_update_remove.js"></script>
+
+    
+</body>
+</html>

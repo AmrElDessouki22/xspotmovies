@@ -1,0 +1,85 @@
+body{
+    background-color: black;
+ 
+
+}
+nav img{
+    width: 10%;
+}
+.detiles h1 {
+    color: white; 
+    width: 100%;
+    text-align: center;
+
+}
+.detiles{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+.detiles input[type=text]{
+    width: 50%;
+    margin: 20px auto;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 900;
+    color: black;
+
+    
+}
+.detiles input[type=text]::placeholder{
+   color: black;
+
+    
+}
+.video{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.video h1{
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+.video input{
+    color: black;
+    width: 70%;
+    margin: 40px auto;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 900;
+    
+}
+.video input::placeholder{
+    color: black;
+    font-size: 14px;
+    font-weight: 900;
+}
+.save input[type=button]{
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 20%;
+    height: 50px;
+    justify-content: center;
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+
+}
+.save input[type=button]:hover{
+    
+    background-color: black;
+    color: white;
+    
+    
+}

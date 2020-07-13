@@ -1,0 +1,164 @@
+body{
+    background-color: black;
+}
+nav img{
+    width: 10%;
+}
+.additem{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+input[type=button]{
+    width: 20%;
+    height: 40px;
+    font-weight: 900;
+    font-size: 24px;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+
+}
+input[type=button]:hover{
+    width: 20%;
+    height: 40px;
+    font-weight: 900;
+    font-size: 24px;
+    text-align: center;
+    background-color: black;
+    margin: auto;
+    color: white;
+    border-radius: 10px;
+
+}
+h4{
+    width: 60%;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+
+}
+.additem div{
+    width: 20%;
+    text-align: end;
+    justify-content: center;
+    margin: auto;
+
+
+}
+.additem div img{
+    margin: 0 10px;
+    width: 10%;
+    cursor: pointer;
+}
+.additem div input[type=text]
+{
+
+    font-size: 14px;
+    background-color: white;
+    border-radius: 10px;
+}
+.countiner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.countiner div{
+    background-color: black;
+    width: 50%;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 25px;
+  
+}
+.countiner div .piceone img{
+    width: 220px;
+    height: 80px;
+    object-fit: cover;
+    margin: 10px;
+    
+}
+.countiner div .piceone {
+    background-color: white;
+    width: 40% ;
+    background-image: url(../img/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 5px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    
+
+}
+.countiner .picetwo h1{
+  
+    max-width: 100%;
+    text-align: center;
+
+
+
+}
+.countiner div .picetwo {
+    background-color: white;
+    width: 40% ;
+    margin: 0;
+
+}
+.countiner div .picethree h1:first-child{
+  
+    margin: auto ;
+    background-color: white;
+    margin: 0 0 0 2px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    border-top-right-radius: 10px;
+}
+.countiner div .picethree h1:first-child:hover{
+  
+    margin: auto ;
+    background-color: black;
+    color: white;
+    margin: 0 0 0 2px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    border-top-right-radius: 10px;
+}
+.countiner div .picethree h1:last-child{
+  
+    margin: auto ;
+    background-color: white;
+    margin: 2px 0 0 2px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    border-bottom-right-radius: 10px;
+}
+.countiner div .picethree h1:last-child:hover{
+  
+    margin: auto ;
+    background-color: black;
+    margin: 2px 0 0 2px;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-bottom-right-radius: 10px;
+}
+.countiner div .picethree {
+    background-color: black;
+    width: 16% ;
+    margin: 0 2px;
+    
+}

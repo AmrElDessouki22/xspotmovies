@@ -1,0 +1,120 @@
+body{
+    background-color: black;
+    margin: 0;
+    width: 100%;
+ 
+
+}
+nav img{
+    width: 10%;
+}
+.detiles h1 {
+    color: white; 
+    width: 100%;
+    text-align: center;
+
+}
+.detiles{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+}
+.detiles input[type=text]{
+    width: 40%;
+    margin: 10px auto;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 900;
+    color: black;
+    
+
+    
+}
+.detiles input[type=text]::placeholder{
+   color: black;
+
+    
+}
+.video .items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.video div h2{
+    color: white;
+    width: 10%;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+.video div input{
+    color: black;
+    width: 70%;
+    margin: 40px auto;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 900;
+    
+}
+.video div input::placeholder{
+    color: black;
+    font-size: 14px;
+    font-weight: 900;
+}
+.save input[type=button]{
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 20%;
+    height: 50px;
+    justify-content: center;
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+
+}
+.video  h1{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: center;
+
+   
+}
+.video input{
+    margin: 10px auto;
+    width: 20%;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    flex-wrap: wrap;
+}
+.video h3{
+    width: 4%;
+    border-radius: 6px;
+    margin: auto;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+.save input[type=button]:hover{
+    
+    background-color: black;
+    color: white;
+    
+    
+}

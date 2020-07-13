@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/filmadditem.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="../../img/logo.png" alt="">
+    </nav>
+    <div class="detiles">
+        <h1>Upload film item</h1>
+        <input type="text" placeholder="id" disabled="true" value="{{id}}" id="id">
+        <input type="text" placeholder="Name" id="name">
+        <input type="text" placeholder="Year" id="year">
+        <input type="text" placeholder="image poster" id="image_poster">
+         <input type="text" placeholder="type (#tags etc comidy drama action)" id="type">
+        <input type="text" placeholder="Description" id="Description">
+    </div>
+     <div class="detiles">
+        <h1>Cast</h1>
+        <input type="text" placeholder="Actor 1" id="actor1">
+        <input type="text" placeholder="Actor 2" id="actor2">
+        <input type="text" placeholder="Actor 3" id="actor3">
+        <input type="text" placeholder="Actor 4" id="actor4">
+      
+    </div>
+    <div class="video">
+        <h1>Video embbed link</h1>
+        <input type="text" placeholder="video link" id="embbed">
+    </div>
+     <div class="save">
+         <input type="button" value="Update" id="update">
+     </div>
+</body>
+<script id="checkuser" data-name="unlogin" src="../../js/checkuser.js"></script>
+<script src="../../js/Update/Updatefilms.js"></script>
+</html>
