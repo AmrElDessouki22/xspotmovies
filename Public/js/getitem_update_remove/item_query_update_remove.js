@@ -1,5 +1,7 @@
 const countiner = document.getElementById('countiner')
 var films_=[]
+//http://localhost:3000
+//https://xspot.herokuapp.com
 const urll = 'https://xspot.herokuapp.com'
 const update_endpoint = document.getElementById('helper').getAttribute('update-endpoint')
 const get_endpoint = document.getElementById('helper').getAttribute('end-point')

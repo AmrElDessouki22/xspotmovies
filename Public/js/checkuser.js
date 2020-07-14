@@ -1,3 +1,5 @@
+//http://localhost:3000
+//https://xspot.herokuapp.com
 const url = 'https://xspot.herokuapp.com'
 var from = document.getElementById("checkuser").getAttribute("data-name");
 checkuser()

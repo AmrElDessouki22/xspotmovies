@@ -68,4 +68,26 @@ app.get('/getseries/:id',async (req,res)=>
         res.status(400).send(e.message)
     }
 })
+app.get('/getarabicgetseries',async (req,res)=>
+{
+    try{
+        const skip = req.query.skip;
+        const limit = req.query.limit;
+        const seriess =  await series.find({type:'arabic'},{},{skip:parseInt(skip),limit:parseInt(limit)}).sort({'createdAt':-1})    
+        res.status(200).send(seriess)
+    }catch(e){
+        res.status(400).send(e.message)
+    }
+})
+app.get('/getenglishgetseries',async (req,res)=>
+{
+    try{
+        const skip = req.query.skip;
+        const limit = req.query.limit;
+        const seriess =  await series.find({type:'english'},{},{skip:parseInt(skip),limit:parseInt(limit)}).sort({'createdAt':-1})    
+        res.status(200).send(seriess)
+    }catch(e){
+        res.status(400).send(e.message)
+    }
+})
 module.exports=app

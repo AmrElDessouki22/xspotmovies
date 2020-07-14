@@ -25,8 +25,6 @@ app.post('/removefilm/:id',adminauth,async (req,res)=>
 app.patch('/updateonlyfilm/:id',adminauth,async (req,res)=>
 {
     const film = await films.findById(req.params.id)
-    console.log(film);
-    
     const keys = Object.keys(req.body)
     const allaw = ['name','year','posterlink','description','type','Cast','videoembbed']
     const check = keys.every((key)=>allaw.includes(key))
@@ -70,5 +68,27 @@ app.get('/getfilm/:id',async (req,res)=>
     }
 })
 
+app.get('/getarabicfilms',async (req,res)=>
+{
+    try{
+        const skip = req.query.skip;
+        const limit = req.query.limit;
+        const film =  await films.find({type:'arabic'},{},{skip:parseInt(skip),limit:parseInt(limit)}).sort({'createdAt':-1})    
+        res.status(200).send(film)
+    }catch(e){
+        res.status(400).send(e.message)
+    }
+})
+app.get('/getenglishfilms',async (req,res)=>
+{
+    try{
+        const skip = req.query.skip;
+        const limit = req.query.limit;
+        const film =  await films.find({type:'english'},{},{skip:parseInt(skip),limit:parseInt(limit)}).sort({'createdAt':-1})    
+        res.status(200).send(film)
+    }catch(e){
+        res.status(400).send(e.message)
+    }
+})
 
 module.exports=app
