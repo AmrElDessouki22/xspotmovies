@@ -6,7 +6,7 @@ loginbutton.addEventListener('click',login)
  async function login(){
      const body_ = {email:email.value,password:password.value}
      
-    const response = await fetch('http://xspot.herokuapp.com'+'/loginAdmin',{
+    const response = await fetch(url+'/loginAdmin',{
         method:"POST",
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify(body_)
