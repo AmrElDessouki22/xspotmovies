@@ -2,6 +2,10 @@ const express = require('express')
 const app = new express.Router()
 const films = require('../DB/Schema/Films')
 const adminauth = require('../Middleware/Auth')
+const fetch = require('node-fetch');
+const request = require('request');
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 app.post('/addfilm',adminauth,async (req,res)=>
 {
     try{
@@ -86,6 +90,22 @@ app.get('/getenglishfilms',async (req,res)=>
         const limit = req.query.limit;
         const film =  await films.find({type:'english'},{},{skip:parseInt(skip),limit:parseInt(limit)}).sort({'createdAt':-1})    
         res.status(200).send(film)
+    }catch(e){
+        res.status(400).send(e.message)
+    }
+})
+
+app.get('/genratelink',async (req,res)=>
+{
+    try{
+        console.log(encodeURI(req.query.link));    
+        const request = require('request');
+        var url =encodeURI(req.query.link)
+    request(url, function (error, response, body) {
+    const dom = new JSDOM(body);
+    res.status(200).send(dom.window.document.getElementsByClassName("WatchURL Gotoscroll nobind Hoverable")[0].href);
+});
+      
     }catch(e){
         res.status(400).send(e.message)
     }
