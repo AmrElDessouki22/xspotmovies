@@ -99,8 +99,11 @@ app.get('/genratelink',async (req,res)=>
 {
     try{
         console.log(encodeURI(req.query.link));    
+
         const request = require('request');
         var url =encodeURI(req.query.link)
+  
+
     request(url, function (error, response, body) {
     const dom = new JSDOM(body);
     res.status(200).send(dom.window.document.getElementsByClassName("WatchURL Gotoscroll nobind Hoverable")[0].href);
@@ -111,4 +114,15 @@ app.get('/genratelink',async (req,res)=>
     }
 })
 
+
+
+app.get('/searchfilm/:search',async (req,res)=>
+{
+    try{
+        const film = await films.findById({name:req.params.search})        
+        res.status(200).send(film)
+    }catch(e){
+        res.status(400).send(e.message)
+    }
+})
 module.exports=app
