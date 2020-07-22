@@ -119,7 +119,7 @@ app.get('/genratelink',async (req,res)=>
 app.get('/searchfilm/:search',async (req,res)=>
 {
     try{
-        const film = await films.find({name:/req.params.search/})        
+        const film = await films.find({name:{"$regex": req.params.search}})   
         res.status(200).send(film)
     }catch(e){
         res.status(400).send(e.message)
