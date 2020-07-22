@@ -90,4 +90,13 @@ app.get('/getenglishgetseries',async (req,res)=>
         res.status(400).send(e.message)
     }
 })
+app.get('/searchseries/:search',async (req,res)=>
+{
+    try{
+        const film = await series.find({name:{"$regex": req.params.search}})   
+        res.status(200).send(film)
+    }catch(e){
+        res.status(400).send(e.message)
+    }
+})
 module.exports=app
