@@ -129,7 +129,7 @@ app.get('/searchfilm/:search',async (req,res)=>
 app.get('/getpriimage',async (req,res)=>
 {
     try{
-        const film = await films.findOne().sort({created_at: -1}) 
+        const film = await films.findOne().sort({created_at: 1}) 
         res.status(200).send(film.posterlink)
     }catch(e){
         res.status(400).send(e.message)
