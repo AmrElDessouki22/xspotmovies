@@ -52,6 +52,7 @@ app.patch('/updateonlyseries/:id',adminauth,async (req,res)=>
 })
 app.get('/getseries',async (req,res)=>
 {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     try{
         const seriess = await series.find({})
         res.status(200).send(seriess)
@@ -70,6 +71,7 @@ app.get('/getseries/:id',async (req,res)=>
 })
 app.get('/getarabicgetseries',async (req,res)=>
 {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     try{
         const skip = req.query.skip;
         const limit = req.query.limit;
@@ -81,6 +83,7 @@ app.get('/getarabicgetseries',async (req,res)=>
 })
 app.get('/getenglishgetseries',async (req,res)=>
 {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     try{
         const skip = req.query.skip;
         const limit = req.query.limit;

@@ -74,6 +74,7 @@ app.get('/getfilm/:id',async (req,res)=>
 
 app.get('/getarabicfilms',async (req,res)=>
 {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     try{
         const skip = req.query.skip;
         const limit = req.query.limit;
@@ -85,6 +86,7 @@ app.get('/getarabicfilms',async (req,res)=>
 })
 app.get('/getenglishfilms',async (req,res)=>
 {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     try{
         const skip = req.query.skip;
         const limit = req.query.limit;
@@ -97,6 +99,7 @@ app.get('/getenglishfilms',async (req,res)=>
 
 app.get('/genratelink',async (req,res)=>
 {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     try{
         console.log(encodeURI(req.query.link));    
 

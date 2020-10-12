@@ -50,7 +50,7 @@ app.patch('/updatematch/:id',adminauth,async (req,res)=>
 })
 app.get('/getmatche',async (req,res)=>
 {
-    
+    res.setHeader('Access-Control-Allow-Origin', '*');
     
     try{
         const footballs = await football.find({})
